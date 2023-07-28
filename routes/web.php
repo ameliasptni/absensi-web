@@ -18,9 +18,31 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::middleware(['auth', 'verified', 'user'])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+
+
+});
+
+Route::middleware(['auth', 'verified', 'admin'])->group(function () {
+    Route::get('/admin/dashboard', function () {
+        return view('admin.dashboard');
+    })->name('admin.dashboard');
+
+    Route::get('/admin/data-karyawan', function () {
+        return view('data-karyawan.index');
+    })->name('admin.data-karyawan');
+
+    Route::get('/admin/data-karyawan/create', function () {
+        return view('data-karyawan.create');
+    })->name('admin.create.data-karyawan');
+});
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
