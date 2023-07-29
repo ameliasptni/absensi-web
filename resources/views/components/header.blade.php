@@ -14,8 +14,7 @@
                     <img class="user-avatar rounded-circle" src="{{ asset('images/logo.png') }}" alt="User Avatar">
                 </a>
                 <div class="user-menu dropdown-menu">
-                    <a class="nav-link" href="#"><i class="fa fa- user"></i>My Profile</a>
-                    <a class="nav-link" href="#"><i class="fa fa -cog"></i>Settings</a>
+                    <a class="nav-link" href="{{ route('profile.edit') }}"><i class="fa fa- user"></i>My Profile</a>
 
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf

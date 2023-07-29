@@ -5,10 +5,10 @@
                 <strong class="card-title">Tambah Data</strong>
             </div>
             <div class="card-body">
-                <form action="{{ route('store.admin.data-karyawan') }}" method="POST">
+                <form action="" method="post">
                     <div class="mb-3">
                         <label for="nama_pegawai" class="form-label">Nama Pegawai</label>
-                        <input type="text" class="form-control" name="name">
+                        <input type="text" class="form-control" name="nm_pegawai">
                     </div>
                     <div class="mb-3">
                         <label for="id_pegawai" class="form-label">ID Pegawai</label>
@@ -20,7 +20,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="jenis_kelamin" class="form-label">Jenis Kelamin</label>
-                        <select class="form-select form-select-lg" name="jenis_kelamin">
+                        <select class="form-select form-select-lg" name="jekel">
                             <option value="Pria">Pria</option>
                             <option value="Wanita">Wanita</option>
                         </select>

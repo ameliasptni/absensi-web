@@ -18,9 +18,30 @@
         @method('patch')
 
         <div>
-            <x-input-label for="name" :value="__('Name')" />
+            <x-input-label for="name" :value="__('Nama')" />
             <x-text-input id="name" name="name" type="text" class="mt-1 block w-full" :value="old('name', $user->name)" required autofocus autocomplete="name" />
             <x-input-error class="mt-2" :messages="$errors->get('name')" />
+        </div>
+
+        <div>
+            <x-input-label for="jabatan" :value="__('Jabatan')" />
+            <x-text-input id="jabatan" name="jabatan" type="text" class="mt-1 block w-full" :value="old('jabatan', $user->jabatan)" required autofocus autocomplete="jabatan" />
+            <x-input-error class="mt-2" :messages="$errors->get('jabatan')" />
+        </div>
+
+        <div class="mb-3">
+            <x-input-label for="jenis_kelamin" :value="__('Jenis Kelamin')" />
+            <select class="form-select mt-1" name="jenis_kelamin" required>
+                <option value="Laki-laki">Laki-laki</option>
+                <option value="Perempuan">Perempuan</option>
+            </select>
+            <x-input-error class="mt-2" :messages="$errors->get('jenis_kelamin')" />
+        </div>
+
+        <div class="mb-3">
+            <x-input-label for="alamat" :value="__('Alamat')" />
+            <x-text-input id="alamat" name="alamat" type="text" class="mt-1 block w-full" required autofocus autocomplete="alamat" />
+            <x-input-error class="mt-2" :messages="$errors->get('alamat')" />
         </div>
 
         <div>

@@ -26,8 +26,8 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="false"> <i class="menu-icon fa fa-table"></i>Absensi</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-table"></i><a href="qr.php">QR Code</a></li>
-                            <li><i class="fa fa-table"></i><a href="absen.php">Data Absensi</a></li>
+                            <li><i class="fa fa-table"></i><a href="{{ route('qrview')}}">QR Code</a></li>
+                            <li><i class="fa fa-table"></i><a href="{{ route('admin.data-absensi') }}">Data Absensi</a></li>
                         </ul>
                     </li>
                     <li>
@@ -38,7 +38,7 @@
                         <a href="{{ route('dashboard') }}"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
                     </li>
                     <li>
-                        <a href="{{ route('admin.data-karyawan') }}"> <i class="menu-icon fa fa-table"></i>Absensi </a>
+                        <a href="{{ route('absensi') }}"> <i class="menu-icon fa fa-table"></i>Absensi </a>
                     </li>
                 @endif
             </ul>

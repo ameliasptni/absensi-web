@@ -23,6 +23,10 @@ class UserSeeder extends Seeder
             'name' => 'Admin',
             'email' => 'admin@admin.com',
             'password' => Hash::make('password'),
+            'id_pegawai' => 'PGW001',
+            'jabatan' => 'Kepala Desa',
+            'jenis_kelamin' => 'Laki-laki',
+            'alamat' => 'Ujung Berung'
         ]);
         $user1->assignRole($adminRole);
 
@@ -30,6 +34,10 @@ class UserSeeder extends Seeder
             'name' => 'User',
             'email' => 'user@user.com',
             'password' => Hash::make('password'),
+            'id_pegawai' => 'PGW002',
+            'jabatan' => 'Admin',
+            'jenis_kelamin' => 'Laki-laki',
+            'alamat' => 'Ujung Berung'
         ]);
         $user2->assignRole($userRole);
     }
